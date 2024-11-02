@@ -1,6 +1,8 @@
 # define function and include three parameters
 def favorite_things(name, favmovie, favmusician):
-    return name, favmovie, favmusician
+    return f'''My name is {name}.
+My favorite movie is {favmovie}.
+My favorite musician is {favmusician}.'''
 
 # call the function with the appropriate arguments   
 print(favorite_things(name='Jennifer',favmovie= 'Crybaby',favmusician= 'HUMBE'))
@@ -14,7 +16,7 @@ print(why_im_here(onereason='I joined this Data Analyst program to break into te
 
 # define function with two parameters
 def favorite_place(favplace, reason):
-    return favplace, reason
+    return f'{favplace}, {reason}'
 
 # call the function with the appropriate arguments and call this function twice, using different places each time 
 print(favorite_place(favplace='One of my favorite places to visit is "La Michocana Gourmet."',reason='It\'s an ice cream shop and it has a variety of treats including tortas and agua frescas.'))
