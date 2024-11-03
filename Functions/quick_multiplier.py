@@ -21,6 +21,7 @@ septupler = lambda n: n * 7
 octupler = lambda n: n * 8
 nonupler = lambda n: n * 9
 decupler = lambda n: n * 10
+# print each of the new variables once with a sample value as the argument
 print (f'Multiply by 4 equals: {quadrupler(3)}')
 print(f'Multiply by 5 equals: {quintupler(4)}')
 print(f'Multiply by 6 equals: {sextupler(5)}')
