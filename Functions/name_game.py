@@ -1,7 +1,8 @@
 # define an input variable to prompt the user for a name
 # create a function to create a truncated version of the name for using in the song
+name1 = input('Enter your name:').lower()
+
 def trunc_name(name):
-    name = input('Enter your name:').lower()
     if name.startswith("a", 2,10):
         return name[2:]
     if name.startswith("a", 2,10):
@@ -75,13 +76,12 @@ def trunc_name(name):
 # define another function called name_game(). This wil be a generator function.
 # create a separate yield statement for each line of the game 
 # using a for loop print the output of the name_game() function for carly, CHARLIE, Aidan, Braden, Billy Bob
+short_nam=trunc_name(name1)
 def name_game():
-    yield "What is your name?"
-    name = input('Enter your name:').lower()
-    yield f'{name[0:10]}, {name[0:10]}, bo-b{name[1:10]}'
-    yield f'banana fana fo-f{name[1:10]}'
-    yield f'me my mo-m{name[1:10]}'
-    yield f'{name}!'
+    yield f'{short_nam}, {short_nam}, bo-b{short_nam}'
+    yield f'banana fana fo-f{short_nam}'
+    yield f'me my mo-m{short_nam}'
+    yield f'{short_nam}!'
 
 for x in name_game():
     print(x)
