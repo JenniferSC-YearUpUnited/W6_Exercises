@@ -13,18 +13,18 @@ class Restaurants:
     def rest_open(self): # add two methods to the class this is two and print an output
         print(f'{self.rest_name} is open ')
 
-    def add_num_served(self):
+    def add_num_served(self): # that accepts an input and adds the number served to the self number served attribute 
         num_served = int(input("How many customers served today? "))
         self.number_served += num_served
     
-    def print_num_served(self):
+    def print_num_served(self): 
         print(f'{self.rest_name} has served {self.number_served} customers')
 
-    def customer_rating(self):
+    def customer_rating(self): # method needs to accept an input of integers 1-5 and adds that number to the list of self customer ratings
         rating= int(input(f"How would you rate your experience today at {self.rest_name} on a scale of 1-5 (5 being excelent)? " ))
         self.customer_ratings.append(rating) 
-        average_rate = sum(self.customer_ratings) / len(self.customer_ratings)  
-        if rating == float:
+        average_rate = sum(self.customer_ratings) / len(self.customer_ratings)   # calculate the average using the sume of the ratings list, divided by the list length
+        if rating == float: # updating the method with conditional logic to account for different possible input types
             print("Invalid entry must be an integer. Please try again")
         elif rating <1:
             print("Invalid rating. Rate on a scale of 1-5 please")
@@ -32,24 +32,6 @@ class Restaurants:
             print("Invalid rating. Rate on a scale of 1-5 please")
         else:
             print(f'Your rating was {rating}. The average rating for this restaurant is {average_rate}') 
-
-
-
-
-
-        # if rating < 1 and rating == float:
-        #         raise ValueError('Invalid rating')
-        # print(input(f"How would you rate your experience today at {self.rest_name} on a scale of 1-5 (5 being excelent)? "))
-        # if rating > 5:
-        #     raise ValueError('Invalid rating. Rate on a scale of 1-5 only!')
-        # print(input(f"How would you rate your experience today at {self.rest_name} on a scale of 1-5 (5 being excelent)? "))
-        # if rating == float:
-        #     raise ValueError('Invalid rating')
-        # print(input(f"How would you rate your experience today at {self.rest_name} on a scale of 1-5 (5 being excelent)? "))
-        
-        # print(f'Your rating was {rating}. The average rating for this restaurant is {average_rate}') 
-    
- 
 
 
 # create three instances of the class for different types of restaurant 
