@@ -10,8 +10,8 @@ class RewardsProgram:
 
     def profile(self): # first method and print the output for name, phone, and email
         print(f'''Name: {self.cust_name}
-Phone: {self.phone}
-Email: {self.email}''')
+                        Phone: {self.phone}
+                        Email: {self.email}''')
 
 
     def thank_you(self): # second method print out message
@@ -21,11 +21,11 @@ Email: {self.email}''')
     def add_to_cust_list(self): # add the customer's name, phone, and email as a tuple to a list that is global in scope. 
         cust_list.append((self.cust_name, self.phone, self.email))
 
-    def visit_rest(self):
-        name_of_rest = input("Please enter name of the restaurant you are visiting: ")
+    def visit_rest(self): # adding new method that accepts two inputs
+        name_of_rest = input("Please enter name of the restaurant you are visiting: ")  # if restaurant they enter is not in the restaurants visited add it to the list
         if name_of_rest not in self.restaurants_visted:
             cust_list.append(name_of_rest)
-        total_bill = float(input("What was the total food bill for this visit?"))
+        total_bill = float(input("What was the total food bill for this visit?")) # ask for the total food bill and convert that about to a rewards point. Add the points earned to rewards points
         self.rewards_points += int(total_bill)
         print(f'''Points for this visit: {int(total_bill)}
 Total rewards points earned: {self.rewards_points}
