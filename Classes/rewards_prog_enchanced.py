@@ -4,6 +4,8 @@ class RewardsProgram:
         self.cust_name = cust_name
         self.phone = phone
         self.email = email
+        self.restaurants_visted=[]
+        self.rewards_points = 0
          
 
     def profile(self): # first method and print the output for name, phone, and email
@@ -18,6 +20,17 @@ Email: {self.email}''')
     
     def add_to_cust_list(self): # add the customer's name, phone, and email as a tuple to a list that is global in scope. 
         cust_list.append((self.cust_name, self.phone, self.email))
+
+    def visit_rest(self):
+        name_of_rest = input("Please enter name of the restaurant you are visiting: ")
+        if name_of_rest not in self.restaurants_visted:
+            cust_list.append(name_of_rest)
+        total_bill = float(input("What was the total food bill for this visit?"))
+        self.rewards_points += int(total_bill)
+        print(f'''Points for this visit: {int(total_bill)}
+Total rewards points earned: {self.rewards_points}
+Thank you for visiting {name_of_rest}''')
+
 
         
 cust_list = []
@@ -44,3 +57,10 @@ cust_3.add_to_cust_list()
 
 # print the contents of cust-list to confirm that all customers have been added
 print(cust_list)
+
+# print output visit rest method for each customer
+cust_1.visit_rest()
+cust_2.visit_rest()
+cust_3.visit_rest()
+cust_3.visit_rest()
+cust_3.visit_rest()
