@@ -8,8 +8,8 @@ class RewardsProgram:
 
     def profile(self): # first method and print the output for name, phone, and email
         print(f'''Name: {self.cust_name}
-Phone: {self.phone}
-Email: {self.email}''')
+                Phone: {self.phone}
+                Email: {self.email}''')
 
 
     def thank_you(self): # second method print out message
