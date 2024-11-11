@@ -34,11 +34,12 @@ finally:
 
 # syntaxerror
 try:
-    n= 1+2!
-except:
+    if 20 > 10
+    print("Good job")
+except SyntaxError:
     print("check your code")    
 else: 
-    print(n)    
+    print("You did it")    
 finally:
     print("please try again")
 
