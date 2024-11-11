@@ -86,7 +86,7 @@ def name_game():
 for x in name_game():
     print(x)
 
-# ran into unexpected outputs- need to correct my code logic as I need to incorporate my truncate function 
+
 
 
 
