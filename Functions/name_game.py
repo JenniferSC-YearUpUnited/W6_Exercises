@@ -68,8 +68,6 @@ def trunc_name(name):
     else:
         [print('ERROR!')]
 
-## NEED HELP: getting the last two consonants to drop
-# print(trunc_name("STAN"))
 
 
 
