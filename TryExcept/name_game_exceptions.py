@@ -73,10 +73,10 @@ def trunc_name(name):
 
 short_nam=trunc_name(name1)
 def name_game():
-    yield f'{short_nam}, {short_nam}, bo-b{short_nam}'
+    yield f'{name1}, {name1}, bo-b{short_nam}'
     yield f'banana fana fo-f{short_nam}'
     yield f'me my mo-m{short_nam}'
-    yield f'{short_nam}!'
+    yield f'{name1}!'
 
 for x in name_game():
     print(x)
